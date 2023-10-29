@@ -9,7 +9,8 @@ public class Zadania_lab2 {
             System.out.println("[1] - zad 2");
             System.out.println("[2] - zad 7");
             System.out.println("[3] - zad 6");
-            System.out.println("[4] - koniec programu");
+            System.out.println("[4] - zad 5");
+            System.out.println("[5] - koniec programu");
             Scanner sc = new Scanner(System.in);
             int choice = sc.nextInt();
             if(choice == 1) {
@@ -114,6 +115,25 @@ public class Zadania_lab2 {
                 for (Map.Entry<String, Integer> entry : sortedCityPopulationMap.entrySet()) {
                     System.out.println(entry.getKey() + ": " + entry.getValue());
                 }
+            }
+            else if(choice == 4){
+                ArrayList<Osoba_zad_5> lista_zad_5 = new ArrayList<>();
+
+                Osoba_zad_5 osoba1 = new Osoba_zad_5("Piotr", 11);
+                Osoba_zad_5 osoba2 = new Osoba_zad_5("Marek", 24);
+                Osoba_zad_5 osoba3 = new Osoba_zad_5("Adam", 91);
+                Osoba_zad_5 osoba4 = new Osoba_zad_5("Jan", 90);
+                lista_zad_5.add(osoba1);
+                lista_zad_5.add(osoba2);
+                lista_zad_5.add(osoba3);
+                lista_zad_5.add(osoba4);
+                Comparator<Osoba_zad_5> wiekComparator = new KomparatorOsob_zad5();
+                Collections.sort(lista_zad_5, wiekComparator);
+
+                for(int i =0;i<lista_zad_5.size();i++){
+                    System.out.println("imie: "+lista_zad_5.get(i).getImie()+" wiek: "+lista_zad_5.get(i).getWiek());
+                }
+
             }
             else
                 break;

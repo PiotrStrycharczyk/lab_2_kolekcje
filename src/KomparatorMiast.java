@@ -5,7 +5,6 @@ class KomparatorMiast implements Comparator<String> {
     public KomparatorMiast(TreeMap<String, Integer> baseMap) {
         this.baseMap = baseMap;
     }
-
     @Override
     public int compare(String city1, String city2) {
         int population1 = baseMap.get(city1);
